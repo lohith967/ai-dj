@@ -50,9 +50,20 @@ function stop_song2(){
     song22.pause();
 song22.currentTime = 0;
 }
+
+function set_volume(){
+    song.setVolume(2);
+    song22.setVolume(2);
+}
+
+function set_speed(){
+    song.rate(2);
+    song22.rate(2);
+}
 function gotposes(results){
     if(results.length >0){
     console.log(results);
+  
     leftWristX = results[0].pose.leftWrist.x;
     leftWristY = results[0].pose.leftWrist.y;
 
@@ -61,6 +72,7 @@ function gotposes(results){
     rightWristX = results[0].pose.rightWrist.x;
     rightWristY = results[0].pose.rightWrist.y;
 
+    console.log("rightWristX = "+rightWristX+"rightWristY = "+rightWristY);
     
     
     }
